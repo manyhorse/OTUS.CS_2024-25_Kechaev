@@ -1,0 +1,50 @@
+Напишите программу, которая отвечает, является ли количество символов в строке четным или нечетным.
+
+0 0 0 r chet
+0 1 1 r chet
+0 _ о * halt ;о - от Ошибка (в данных)
+ 
+chet 0 0 r nechet
+chet 1 1 r nechet
+chet _ Н * halt ; Н - число записей до отработки было нечетным
+
+nechet 0 0 r chet
+nechet 1 1 r chet
+nechet _ Ч * halt ; Ч - число записей до отработки было четным
+
+
+
+
+Инкрементирует число
+;Для чисел от 0 до 7 включительно, длина ленты не более 3
+0 0 0 r second0
+0 1 1 r second1
+
+;ДИАГНОСТИКА
+
+second0 0 0 r third00
+second0 1 1 r third01
+second1 0 0 r third10
+second1 1 1 r third11
+
+third00 0 1 * halt
+third00 1 0 l incr001
+third01 0 1 * halt
+third01 1 0 l incr011
+third10 0 1 * halt
+third10 1 0 l incr101
+third11 0 1 * halt
+third11 1 1 * halt
+
+incr001 0 1 * halt
+incr011 1 0 l incr011
+incr011 0 1 * halt 
+incr101 0 1 * halt
+
+;ОШИБКИ
+0 _ * r halt
+
+
+
+
+Дополнительное (по желанию): Записывает строку в обратном порядке: 101010 -> 010101
