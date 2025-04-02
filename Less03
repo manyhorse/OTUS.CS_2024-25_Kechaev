@@ -1,0 +1,14 @@
+Y = ABCD + ABC + ABCD + ABD + ABCD + BCD + A =
+= ABCD + ABC + ABD + BCD + A {повторения ABCD}
+= A {Поглощения A} #собственно, можно было сразу...
+
+Y = ABC + ABC
+= ABC {Повторения}
+
+Y = ABC + AB
+= AB {Поглошениz}
+
+Y=ABCD+ABCD+ðA+B+C+D
+= ABCD+ðA+B+C+D = {Повторения ABCD}
+= 1 + B + C + D = {Исключения третьего ABCD+ðA}
+= 1 = {Операции с константами}
